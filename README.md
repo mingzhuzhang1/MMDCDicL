@@ -2,37 +2,28 @@
 Zhonggui Sun, Mingzhu Zhang, Huichao Sun, Jie Li, Tingting Liu, Xinbo Gao*, "Multi-Modal Deep Convolutional Dictionary Learning for Image Denoising," in Neurocomputing. (* Corresponding author)
 
 
-The implementation of MMDCDicL is based on the [[DCDicL]] (https://github.com/cszn/KAIR).
+The implementation of MMDCDicL is based on the [[DCDicL]] (https://github.com/natezhenghy/DCDicL_denoising).
 
 ## Requirement
 - PyTorch 1.6+
 - prettytable
 - tqdm
-
-## Testing
-**Step 1**
-
-- Download pretrained models from [[OneDrive]](https://1drv.ms/u/s!ApI9l49EgrUbjJ8cmYU4XBFUPutmag?e=AUEgnb) or [[BaiduPan]](https://pan.baidu.com/share/init?surl=vIqN2XiZ9UH8vcUpZPbXnw) (password: flfw).
-- Unzip downloaded file and put the folders into ```./release/denoising```
-
-**Step 2**
-
+## Usage
+### Testing
+#### Modify Parameter
 Configure ```options/test_denoising.json```. Important settings:
 - task: task name.
 - path/root: path to save the tasks.
 - path/pretrained_netG: path to the folder containing the pretrained models.
 
 
-**Step 3**
+#### Runing
 ```bash
 python test_dcdicl.py
 ```
 
-
-
-## Training
-**Step 1**
-
+### Training
+#### Prepare training datasets
 Prepare training/testing data. The folder structure should be similar to:
 
 ```
@@ -44,16 +35,31 @@ Prepare training/testing data. The folder structure should be similar to:
 |       +-- Flash_non_Flash
 |       +-- RGB_NIR
 ```
+#### Modify Parameter
+Configure options/train_denoising.json. Important settings:
 
-**Step 2**
+task: task name.
+path/root: path to save the tasks.
+data/train/sigma: range of noise levels.
+netG/d_size: dictionary size.
+netG/n_iter: number of iterations.
+netG/nc_x: number of channels in NetX.
+netG/nb: number of blocks in NetX.
+test/visualize: true for saving the noisy input/predicted dictionaries.
+If you want to reload a pretrained model, pay attention to following settings:
+path/pretrained_netG: path to the folder containing the pretrained models.
 
-
-**Step 3**
+#### Runing
 ```bash
 python train_dcdicl.py
 ```
+## Result
+### Quantitative Results
+![image](https://github.com/sunhuichao/ARNLB/blob/main/Table%20I.png)
+### Qualitative Results
+<div align=center><img src="https://github.com/sunhuichao/ARNLB/blob/main/Fig%202.png"/></div>
 
+## Acknowledgments
+The authors would like to express their great thankfulness to the Associate Editor and the anonymous reviewers for
+their valuable comments and constructive suggestions. At the same time, they would like to express their heartfelt thanks to the authors of the open source DCDicL.
 ## Citation
-```
-
-```
