@@ -55,7 +55,7 @@ python train_dcdicl.py
 ```
 ## Result
 ### Quantitative Results
-![image](https://github.com/sunhuichao/ARNLB/blob/main/Table%20I.png)
+![image](https://github.com/mingzhuzhang1/MMDCDicL/blob/main/Table1.png)
 ### Qualitative Results
 <div align=center><img src="https://github.com/mingzhuzhang1/MMDCDicL/blob/main/Figure2.png"/></div>
 
