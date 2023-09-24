@@ -2,7 +2,7 @@
 Zhonggui Sun, Mingzhu Zhang, Huichao Sun, Jie Li, Tingting Liu, Xinbo Gao*, "Multi-Modal Deep Convolutional Dictionary Learning for Image Denoising," in Neurocomputing. (* Corresponding author)
 
 
-The implementation of MMDCDicL is based on the [[DCDicL]] (https://www4.comp.polyu.edu.hk/~cslzhang/paper/DCDicL-cvpr21-final.pdf)(https://github.com/natezhenghy/DCDicL_denoising).
+The implementation of MMDCDicL is based on the [[DCDicL]] (https://github.com/natezhenghy/DCDicL_denoising).
 
 ## Requirement
 - PyTorch 1.6+
@@ -61,5 +61,5 @@ python train_dcdicl.py
 
 ## Acknowledgments
 The authors would like to express their great thankfulness to the Associate Editor and the anonymous reviewers for
-their valuable comments and constructive suggestions. At the same time, they would like to express their heartfelt thanks to the authors of the open source DCDicL.
+their valuable comments and constructive suggestions. At the same time, they would like to express their heartfelt thanks to the authors of the open source DCDicL. We recommend reading this article [DCDicL](https://www4.comp.polyu.edu.hk/~cslzhang/paper/DCDicL-cvpr21-final.pdf).
 ## Citation
